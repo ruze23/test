@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+}
+body{
+    background-color:#edf0f1;
+}
+li,a,button,h1{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+header{
+    background-color: #24252A;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+.nav_link{
+    list-style: none;
+}
+.nav_link li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.nav_link li a{
+    transition: all 0.3s ease 0s;
+}
+.nav_link li a:hover{
+    color :#0088a9;
+}
+.dropdown{
+    border:1px solid red;
+}
+.dropdown form{
+    border: 10px solid blue;
+
+}
+.inputContainer{
+    position:absolute;
+    left: 20%;
+    top:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+    gap:30px;
+    border: 1px solid red;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 25%;
+    padding:20px;
+}
+.inputContainer2{
+    position:absolute;
+    right:20%;
+    top:20%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 200px;
+    gap:30px;
+    border: 1px solid red;
+    border-radius: 15px;
+    box-sizing: border-box;
+    width: 25%;
+    padding:20px;
+}
+.inputBox,h2{
+    position:relative;
+    right: 20%;
+    left: 2%;
+    width:200px;
+}
+.inputBox input{
+    width:100%;
+    padding: 10px;
+    border: 1px solid #24252A;
+    background-color: #edf0f1;
+    border-radius: 5px;
+    outline:none;
+    font-size: 1em;
+}
+.inputBox span{
+    position: absolute;
+    left:0;
+    padding: 10px;
+    pointer-events: none;
+    font-size: 1em;
+    color:#5a5a5a;
+    transition: 0.5s;
+}
+.inputBox input:valid ~span,
+.inputBox input:focus ~span{
+    color: red;
+    transform: translateX(10px)translateY(-7px);
+    font-size: 1em;
+    padding: 0 11px;
+    background: #edf0f1;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+}
+.inputBox input:valid,
+.inputBox input:focus
+{
+    border: 1px solid red;
+}
+
+.box{
+   position: absolute;
+   left: 25%;
+    overflow: hidden;
+    width: 750px;
+}
+.typeW{
+   position:relative;
+   left: 40%;
+  padding-top: 120px;
+  font-size: 50px;
+  border-right: 2px solid rgba(255,255,255,0.75);
+  white-space: nowrap;
+  overflow: hidden;transform:translateY(-50%);
+}
+.animWrite{
+    animation: typewriter 4s steps(36) infinite,
+    blinkTextCursor 500ms steps(36) normal;
+}
+
+@keyframes typewriter{
+    from{
+        width: 0;
+    }
+    to {
+        width: 16em;
+    }      
+}
+@keyframes blinkTextCursor{
+    from{
+        border-right-color: rgba(255,255,255,0.75);
+    }
+    to{
+        border-right-color: transparent;
+    }
+}
